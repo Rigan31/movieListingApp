@@ -35,22 +35,14 @@ Clone the repository:
 ```bash
 git clone https://github.com/Rigan31/movieListingApp.git
 ```
-Navigate to the directory:
-```bash
-cd movieListingApp
-```
-Run the application:
-```bash
-dotnet run
-```
-Once the application is running, users can interact with the menu displayed in the terminal to perform various actions such as registration, searching for movies, adding/removing movies from favorites, viewing personal details, etc.
-To run the application, execute the provided C# console application file. Once the application is running, users can interact with the menu displayed in the terminal to perform various actions such as registration, searching for movies, adding/removing movies from favorites, viewing personal details, etc.
+
+To run the application, execute the provided java console application file. Once the application is running, users can interact with the menu displayed in the terminal to perform various actions such as registration, searching for movies, adding/removing movies from favorites, viewing personal details, etc.
 
 ## Tests
 Test cases have been implemented for each class to ensure the correctness and robustness of the application. These tests cover various scenarios such as user registration, movie search, adding/removing movies from favorites, etc. You can run the tests to verify the functionality of the application.
 
 ## Dependencies
-This application does not have any external dependencies other than the standard libraries provided by the programming language used (C# in this case).
+This application does not have any external dependencies other than the standard libraries provided by the programming language used (Java in this case).
 
 ## Contributors
 Md.Mahedi Hasan Rigan
