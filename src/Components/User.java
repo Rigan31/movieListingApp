@@ -48,6 +48,10 @@ public class User {
         return favorites;
     }
 
+    public String getEmail(){
+        return email;
+    }
+
     public void displayFavorites() {
         if (!favorites.isEmpty()) {
             System.out.println("\nFavorite Movies:");
