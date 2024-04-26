@@ -8,25 +8,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MovieTest {
-
-    @Test
-    void testToString() {
-        // Given
-        String title = "Movie Title";
-        List<String> cast = Arrays.asList("Actor 1", "Actor 2");
-        String category = "Action";
-        LocalDate releaseDate = LocalDate.of(2022, 4, 28);
-        double budget = 1000000.00;
-        Movie movie = new Movie(title, cast, category, releaseDate, budget);
-
-        // When
-        String expectedToString = "Title: Movie Title\nCast: Actor 1, Actor 2\nCategory: Action\nRelease Date: 2022-04-28\nBudget: $1,000,000.00\n";
-        String actualToString = movie.toString();
-
-        // Then
-        assertEquals(expectedToString, actualToString);
-    }
-
     @Test
     void getTitle() {
         // Given

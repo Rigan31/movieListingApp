@@ -2,6 +2,8 @@ package UnitTests;
 
 import Components.*;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -29,8 +31,10 @@ class MovieListingAppTest {
         MovieRepository movieRepository = new MovieRepository();
         UserRepository userRepository = new UserRepository();
         MovieListingApp movieListingApp = new MovieListingApp(movieRepository, userRepository);
-        Movie movie1 = new Movie("Movie 1", null, "Action", null, 0);
-        Movie movie2 = new Movie("Movie 2", null, "Drama", null, 0);
+        List<String> cast1 = Arrays.asList("Actor A", "Actor B", "Actor C");
+        List<String> cast2 = Arrays.asList("Actor D", "Actor E", "Actor F");
+        Movie movie1 = new Movie("Movie 1", cast1, "Action", null, 0);
+        Movie movie2 = new Movie("Movie 2", cast2, "Drama", null, 0);
         movieRepository.addMovie(movie1);
         movieRepository.addMovie(movie2);
 
@@ -48,6 +52,7 @@ class MovieListingAppTest {
 
         assertTrue(searchResults3.isEmpty());
     }
+
 
     @Test
     void addUser() {

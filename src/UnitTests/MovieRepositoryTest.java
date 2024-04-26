@@ -3,6 +3,8 @@ package UnitTests;
 import Components.Movie;
 import Components.MovieRepository;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,9 +46,12 @@ class MovieRepositoryTest {
     void searchMovies() {
         // Given
         MovieRepository movieRepository = new MovieRepository();
-        Movie movie1 = new Movie("Movie 1", null, "Action", null, 0);
-        Movie movie2 = new Movie("Movie 2", null, "Drama", null, 0);
-        Movie movie3 = new Movie("Movie 3", null, "Action", null, 0);
+        List<String> cast1 = Arrays.asList("Actor A", "Actor B", "Actor C");
+        List<String> cast2 = Arrays.asList("Actor D", "Actor E", "Actor F");
+        List<String> cast3 = Arrays.asList("Actor G", "Actor H", "Actor I");
+        Movie movie1 = new Movie("Movie 1", cast1, "Action", null, 0);
+        Movie movie2 = new Movie("Movie 2", cast2, "Drama", null, 0);
+        Movie movie3 = new Movie("Movie 3", cast3, "Action", null, 0);
         movieRepository.addMovie(movie1);
         movieRepository.addMovie(movie2);
         movieRepository.addMovie(movie3);
@@ -66,4 +71,5 @@ class MovieRepositoryTest {
 
         assertTrue(searchResults3.isEmpty());
     }
+
 }
