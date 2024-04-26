@@ -52,6 +52,10 @@ public class User {
         return email;
     }
 
+    public LocalDate getAccountCreationDate(){
+        return accountCreationDate;
+    }
+
     public void displayFavorites() {
         if (!favorites.isEmpty()) {
             System.out.println("\nFavorite Movies:");
