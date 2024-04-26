@@ -55,13 +55,30 @@ public class Main {
 
     static MovieRepository createSampleMovieRepository() {
         MovieRepository movieRepository = new MovieRepository();
-
+        for (int i = 0; i < 5; i++) {
+            String title = "Movie " + (i + 1);
+            List<String> cast = List.of("Actor 1", "Actor 2", "Actor 3");
+            String category = "Action";
+            int year = (int) (Math.random() * (2023 - 2000 + 1)) + 2000;
+            int month = (int) (Math.random() * 12) + 1;
+            int day = (int) (Math.random() * 28) + 1;
+            LocalDate releaseDate = LocalDate.of(year, month, day);
+            double budget = Math.random() * (1_000_000_000 - 1_000_000 + 1) + 1_000_000;
+            Movie movie = new Movie(title, cast, category, releaseDate, budget);
+            movieRepository.addMovie(movie);
+        }
         return movieRepository;
     }
 
     static UserRepository createSampleUserRepository() {
         UserRepository userRepository = new UserRepository();
-        
+        for (int i = 0; i < 3; i++) {
+            String name = "User " + (i + 1);
+            String email = "user" + (i + 1) + "@example.com";
+            String gender = (i % 2 == 0) ? "Male" : "Female";
+            User user = new User(name, email, gender);
+            userRepository.addUser(user);
+        }
         return userRepository;
     }
 
